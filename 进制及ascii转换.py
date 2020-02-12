@@ -21,6 +21,9 @@ ls=erZhuanShi(ls)  #[102, 108, 97, 103, 123, 87, 48, 87, 42, 102, 117, 110, 110,
 ls=shiZhuanAscii(ls) #flag{W0W*funny}
 print(ls)
 '''
+s="52 14 51 44 14 55 41 43 53 14 42 52 15 42 14 55 53 13 15 43 53 13 21 42 45 54 22 12 33"
+ls=s.split(" ")
+print(shiZhuanAscii(ls))
 
 
 

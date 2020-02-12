@@ -44,9 +44,9 @@ def main(times,space,*urls):
 times=100       #刷访客次数
 space=60		#每次访问间隔时间
 main(times,space,
-	 # "https://blog.csdn.net/zss192/article/details/104160853",
-	# "https://blog.csdn.net/zss192/article/details/104144006",
-	"https://blog.csdn.net/zss192/article/details/104133448"
+	 #  "https://blog.csdn.net/zss192/article/details/104247428",
+	 #"https://blog.csdn.net/zss192/article/details/104268420",
+	"https://blog.csdn.net/zss192/article/details/104252678"
 	)
 
 

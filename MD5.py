@@ -7,5 +7,9 @@ def MD5(str):
 
     
 # print(MD5("abd"))
+for i in range(9999999,9999999999):
+	if(MD5(str(i))[:6]=="5ca419"):
+		print(i)
+		break
 
 

@@ -1,3 +1,6 @@
+#代码不能再sublime下运行，会报错，在idle下运行即可
+#更推荐用Pkav HTTP Fuzzer爆破验证码
+
 import requests  #调用url、cookie操作 文件操作的库
 import sys
 import time
