@@ -1,3 +1,5 @@
+##用于根据CRC爆破宽和高，修改相应值使图片正常显示，
+##宽高错误时，linux下打不开图片，win可以
 import zlib
 import struct
 
@@ -21,3 +23,5 @@ with open(filename, 'rb') as f:
                 print("高为：",end="")
                 print(height)
                 exit(0)
+
+
