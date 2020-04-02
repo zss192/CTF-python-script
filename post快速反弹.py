@@ -24,7 +24,7 @@ import string
 url = 'https://ordinal-scale.hgame.n3ko.co/game.php'  
 s = requests.Session()	
 html = s.get(url).text	
-expression = re.compile(r'(?<=<div>).*(?=\=)').findall(html) 
+expression = re.compile(r'(?<=<div>).*(?=</div>)').findall(html) 
 
 payload = {'value': eval(expression[0])}	
 flag = s.post(url, data=payload)	

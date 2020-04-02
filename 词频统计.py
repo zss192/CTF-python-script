@@ -1,4 +1,4 @@
-f=open("flag.txt",'r')
+f=open("out.txt",'r')
 a=f.read()
 
 d3=dict()

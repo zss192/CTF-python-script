@@ -1,7 +1,7 @@
 # 适用于mt_srand(seed)然后后面的mt_rand(这里有一个范围)
 
-str1='abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-str2='spOkHn1QfZ'
+str1='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+str2='KVQP0LdJKRaV3n9D'
 str3 = str1[::-1]
 length = len(str2)
 res=''
