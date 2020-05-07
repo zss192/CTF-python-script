@@ -1,7 +1,9 @@
-# import requests
-# import re
-# import random
-# import string
+import requests
+import re
+import random
+import string
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 # url = 'https://ordinal-scale.hgame.n3ko.co/game.php'   # 链接
 # s = requests.Session()	# 创建session对象
@@ -15,20 +17,12 @@
 
 
 
+url = 'http://ha1cyon-ctf.fun:30197/login.php'  
 
-import requests
-import re
-import random
-import string
 
-url = 'https://ordinal-scale.hgame.n3ko.co/game.php'  
-s = requests.Session()	
-html = s.get(url).text	
-expression = re.compile(r'(?<=<div>).*(?=</div>)').findall(html) 
-
-payload = {'value': eval(expression[0])}	
-flag = s.post(url, data=payload)	
+flag = requests.post(url, data=payload)	
 flag.encoding = 'utf-8'	
+# expression = re.compile(r'(?<=<div>).*(?=</div>)').findall(html) 
 print(flag.text)
 
 
