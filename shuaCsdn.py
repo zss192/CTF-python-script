@@ -2,7 +2,7 @@
 # CSDN刷访客
 # Author: 夏日
 # 分为指定url和遍历所有文章两种模式
-# github: https://github.com/zss192/CTF-python-script/blob/master/csdn%E5%88%B7%E8%AE%BF%E5%AE%A2.py
+# github: https://github.com/zss192/CTF-python-script/blob/master/shuaCsdn.py
 
 import re
 import requests
