@@ -36,7 +36,7 @@ def shua(url):
            }    
     s = requests.Session()  # 创建session对象
     html = s.get(url, headers=header).text  # get请求获取全部文本
-    title = re.compile(r'(?<=<h1 class="title-article">).*(?=<\/h1>)').findall(html)
+    title = re.compile(r'(?<=<h1 class="title-article" id="articleContentId">).*(?=<\/h1>)').findall(html)
     views = re.compile(r'(?<=<span class="read-count">).*(?=<\/span>)').findall(html)
     print("标题："+str(title)+str(views))
 
@@ -60,9 +60,12 @@ def main(times,space,*urls):
 #space:每篇文章访问间隔(不要太快只要保证第二轮访问间隔一分钟即可)
 ###     
 def sumShua(url,times,space): 
-    flag = requests.get(url) 
-    flag.encoding = 'utf-8' 
-    html=flag.text
+    header={
+            'User-Agent':random.choice(user_agent_list), 
+            'Referer':random.choice(referer_list)
+           }    
+    s = requests.Session()  # 创建session对象
+    html = s.get(url, headers=header).text  # get请求获取全部文本
     ls = re.findall(r""+url+"/article/details/\d*", html)
     ls = list(set(ls))
     for i in range(1,times+1):
@@ -77,11 +80,15 @@ sumShua("https://blog.csdn.net/zss192",2,1)
 
 
 #main(times,space,url...)
-# main(150,60,
-#    "https://blog.csdn.net/zss192/article/details/105436623",
-#    "https://blog.csdn.net/zss192/article/details/105393747",
-#      "https://blog.csdn.net/zss192/article/details/105376347",
-#      "https://blog.csdn.net/zss192/article/details/105362282",
+# main(150,65,
+#     "https://blog.csdn.net/zss192/article/details/112388335",
+#     "https://blog.csdn.net/zss192/article/details/112426855",
+#     "https://blog.csdn.net/zss192/article/details/112388383",
+#     "https://blog.csdn.net/zss192/article/details/112316516",
+#     "https://blog.csdn.net/zss192/article/details/109095275",
+#     "https://blog.csdn.net/zss192/article/details/109085435",
+#     "https://blog.csdn.net/zss192/article/details/108694699",
+#     "https://blog.csdn.net/zss192/article/details/109034551"
 #   )
 
 
